@@ -1105,8 +1105,8 @@
 
                 if (column.switchable) {
                     html.push(sprintf('<li>' +
-                        '<label><input type="checkbox" data-field="%s" value="%s"%s> %s</label>' +
-                        '</li>', column.field, i, checked, column.title));
+                        '<label title="%s"><input type="checkbox" data-field="%s" value="%s"%s> %s</label>' +
+                        '</li>', column.titleTooltip ||'', column.field, i, checked, column.title));
                     switchableCount++;
                 }
             });
